@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Kaloyan Kostadinov - Junior Developer</title>
-	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 <%= csrf_meta_tags %>
 
@@ -10,15 +9,25 @@
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
-	<header id="main_navigation" class="clearfix">
-		<a href="index.html" class="name">Kaloyan Kostadinov</a>
-		<nav>
-			<%= link_to "Articles", posts_path %>
-			<a href="#">Projects</a>
-			<a href="contact.html">Contact</a>
-		</nav>
-	</header>
-<%= yield %>
-</body>
+	<body>
+		<header id="main_navigation" class="clearfix">
+			<%= link_to "Kaloyan Kostadinov", root_path, class: "name" %>
+			<nav>
+				<%= link_to "Articles", posts_path %>
+				<a href="#">Projects</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</header>
+		<br>
+	
+	<%= yield %>
+		<br>
+		<br>
+		<footer id="main_footer">
+			<p class="copyright">&copy; 2017 Kaloyan Kostadinov</p>
+			<nav>
+				<a href="https://www.facebook.com/kaloqn.kostadinov2" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			</nav>
+		</footer>
+	</body>
 </html>

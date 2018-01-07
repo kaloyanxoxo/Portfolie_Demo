@@ -1,0 +1,24 @@
+<div class="wrapper wrapper_padding clearfix">
+		<div class="col-1 about homepage_content">
+			<h2>About</h2>
+			<hr>
+			<p>As a young interested in programming man,living in Ruse,Bulgaria,I'm looking
+			for successful way of doing the job.</p>
+			<p>As a learner of a front-end developing and a Rails developing, I'm looking forward for success 
+			and new opportunities for career with front-end and Rails developing. </p>
+		</div>
+		<div class="col-2 homepage_content">
+			<h2>Stuff I've completed</h2>
+			<hr>
+			<% @posts.each do |post| %>
+				<h3><a href="#"><%= link_to post.title, post %></a></h3>
+				<p class="date"><%= post.created_at %></p>
+			<% end %>
+		</div>
+		<div class="col-3 homepage_content">
+			<h2>Stuff i've built</h2>
+			<hr>
+			<p>Bunch of applications through the time of the RoR course</p>
+			<p>Some old basic HTML and CSS styling</p>
+		</div>
+	</div>
