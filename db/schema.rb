@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108102352) do
+ActiveRecord::Schema.define(version: 20180108124026) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -26,5 +26,13 @@ ActiveRecord::Schema.define(version: 20180108102352) do
 
 # Could not dump table "posts" because of following StandardError
 #   Unknown type 'String' for column 'slug'
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
