@@ -12,6 +12,8 @@ gem 'redcarpet', '~>3.2.2'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'mail_form', '~> 1.7'
+gem 'sendgrid-ruby'
+
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
