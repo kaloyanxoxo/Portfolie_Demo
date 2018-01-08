@@ -7,6 +7,7 @@ end
 
 ruby '2.4.0'
 
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'redcarpet', '~>3.2.2'
 gem 'pygments.rb', '~> 0.6.0'
 
