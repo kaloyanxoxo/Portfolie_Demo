@@ -275,5 +275,4 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.action_mailer.default_url_options = { host: 'https://morning-hamlet-15412.herokuapp.com' }
 end
