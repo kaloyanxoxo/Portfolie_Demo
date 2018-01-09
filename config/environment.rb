@@ -1,6 +1,9 @@
 # Load the Rails application.
 require_relative 'application'
 
+SENDGRID_USERNAME: 'KaloyanKostadinov'
+SENDGRID_PASSWORD: 'Kaloyan960726'
+
 # Initialize the Rails application.
 Rails.application.initialize!
 
