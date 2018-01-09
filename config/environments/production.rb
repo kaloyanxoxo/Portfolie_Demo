@@ -76,6 +76,11 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -88,15 +93,13 @@ Rails.application.configure do
 # Setup the mailer config
   config.action_mailer.default_url_options = { host: 'https://morning-hamlet-15412.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-
-  config.action_mailer.smtp_settings = {
-    :domain => 'heroku.com',
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :authentication => :plain,
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :enable_starttls_auto => true
-  }
+  ActionMailer::Base.smtp_settings = {
+  :domain => 'yourdomain.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :user_name => ENV['SENDGRID_USERNAME'],
+  :password => ENV['SENDGRID_PASSWORD'],
+  :enable_starttls_auto => true
+}
 end
