@@ -14,8 +14,6 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'mail_form', '~> 1.7'
 gem 'sendgrid-ruby'
 
-
-gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use Puma as the app server
