@@ -91,7 +91,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 # Setup the mailer config
-  config.action_mailer.default_url_options = { host: 'https://kaloyankostadinov.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://morning-hamlet-15412.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
