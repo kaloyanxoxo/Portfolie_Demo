@@ -24,8 +24,14 @@ ActiveRecord::Schema.define(version: 20180109205744) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'String' for column 'slug'
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_posts_on_slug", unique: true
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
